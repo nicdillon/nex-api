@@ -560,11 +560,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\oversight\\oversight-steam-webservice\\oversight-steam-webservice.csproj",
-      "projectName": "oversight-steam-webservice",
-      "projectPath": "C:\\Projects\\oversight\\oversight-steam-webservice\\oversight-steam-webservice.csproj",
+      "projectUniqueName": "C:\\Users\\nicho\\source\\repos\\nex-api\\NexAPI.csproj",
+      "projectName": "NexAPI",
+      "projectPath": "C:\\Users\\nicho\\source\\repos\\nex-api\\NexAPI.csproj",
       "packagesPath": "C:\\Users\\nicho\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\oversight\\oversight-steam-webservice\\obj\\",
+      "outputPath": "C:\\Users\\nicho\\source\\repos\\nex-api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nicho\\AppData\\Roaming\\NuGet\\NuGet.Config",

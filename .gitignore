@@ -1,1 +1,22 @@
-appsettings.Development.json
+# Build artifacts
+bin/
+obj/
+
+# User-specific files
+*.csproj.user
+*.suo
+*.user
+.vscode/
+.vs/
+
+# Secrets
+**/secrets.json
+
+# Docker overrides and environment files
+docker-compose.override.yml
+.env
+
+# Logs and temp files
+*.log
+*.tmp
+/appsettings.Development.json

@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace oversight_steam_webservice.Models
+namespace NexAPI.Models
 {
     public class SteamGame
     {

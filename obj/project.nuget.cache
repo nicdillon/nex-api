@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Nqis/rM97LLNCS4YX7Ew/VurPa0UORIW3myMTq/0bB6qWTwTPjBFjNhGpnv1b9ZEloL6uzstqwQEJbzEsnEn5A==",
+  "dgSpecHash": "MEyU2o6t6C7VqM7n/wb6sqB81WdlVe0Pu+xVbdRZg+dIfI352EhiIYiqSK8bi133Zu9U7rxHWEKfU5xjDz6/gQ==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\oversight\\oversight-steam-webservice\\oversight-steam-webservice.csproj",
+  "projectFilePath": "C:\\Users\\nicho\\source\\repos\\nex-api\\NexAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nicho\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\nicho\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

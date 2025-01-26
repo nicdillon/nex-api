@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "6Aetb8SUk6uElCYk6S5kGjXgS6KlTsXLa9ieWl6lhbU=",
-  "Source": "oversight-steam-webservice",
-  "BasePath": "_content/oversight-steam-webservice",
+  "Hash": "Z4JHeFwUfl0jJM/zwoKAK5165PA7sC4K1CZ27qdHLmc=",
+  "Source": "NexAPI",
+  "BasePath": "_content/NexAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

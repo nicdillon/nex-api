@@ -1,13 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>oversight_steam_webservice</RootNamespace>
+    <RootNamespace>NexAPI</RootNamespace>
     <UserSecretsId>58d38e78-8b59-4389-b66a-db54ee3403e1</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
+	<DockerDevelopmentMode>Compose</DockerDevelopmentMode>
   </PropertyGroup>
 
   <ItemGroup>

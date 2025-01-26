@@ -1,4 +1,4 @@
-using oversight_steam_webservice.Services;
+using NexAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddHttpClient();

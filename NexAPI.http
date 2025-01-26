@@ -1,0 +1,6 @@
+@NexAPI_HostAddress = http://localhost:5243
+
+GET {{NexAPI_HostAddress}}/SteamAPI/GetSteamGames/
+Accept: application/json
+
+###

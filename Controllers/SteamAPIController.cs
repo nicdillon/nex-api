@@ -1,25 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
-using oversight_steam_webservice.Models;
-using oversight_steam_webservice.Services;
+using NexAPI.Models;
+using NexAPI.Services;
 using System.Web;
 
-namespace oversight_steam_webservice.Controllers
+namespace NexAPI.Controllers
 {
     [ApiController]
     [Route("api/steam")]
-    public class SteamAPIController : ControllerBase
+    public class SteamAPIController(ILogger<SteamAPIController> logger, IConfiguration configuration, SteamAPIService steamService) : ControllerBase
     {
-        private readonly ILogger<SteamAPIController> _logger;
-        private readonly IConfiguration _configuration;
-        private SteamAPIService _steamService;
-
-
-        public SteamAPIController(ILogger<SteamAPIController> logger, IConfiguration configuration, SteamAPIService steamService)
-        {
-            _logger = logger;
-            _configuration = configuration;
-            _steamService = steamService;
-        }
+        private readonly ILogger<SteamAPIController> _logger = logger;
+        private readonly IConfiguration _configuration = configuration;
+        private readonly SteamAPIService _steamService = steamService;
 
         [HttpGet(Name = "GetSteamGames")]
         public async Task<IEnumerable<SteamGame>> GetGamesAsync()
@@ -30,8 +22,8 @@ namespace oversight_steam_webservice.Controllers
             }
             catch (Exception ex)
             {
-                string message = $"Error getting Steam games: {ex.Message}";
-                _logger.LogError(message: message);
+                string errorMessage = $"Error getting Steam games: {ex.Message}";
+                _logger.LogError(message: errorMessage);
                 return [];
             }
         }
@@ -59,7 +51,7 @@ namespace oversight_steam_webservice.Controllers
                 return BadRequest("Invalid Steam OpenID");
             }
 
-            string steamId = await _steamService.GetSteamIdFromOpenIdAsync(openid);
+            string steamId = _steamService.GetSteamIdFromOpenIdAsync(openid);
             var games = await _steamService.GetOwnedGamesAsync(steamId);
 
             return Ok(games);

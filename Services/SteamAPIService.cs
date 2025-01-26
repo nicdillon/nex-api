@@ -1,21 +1,23 @@
-using oversight_steam_webservice.Models;
+using NexAPI.Models;
 using System.Text;
 using System.Text.Json;
 
 
-namespace oversight_steam_webservice.Services
+namespace NexAPI.Services
 {
     public class SteamAPIService
     {
         private readonly IConfiguration _configuration;
         private readonly IHttpClientFactory _httpClientFactory;
         private const string STEAM_API_URL = "https://api.steampowered.com/IStoreService/GetAppList/v1/?include_games=true&include_dlc=false&include_software=false&include_videos=false&include_hardware=false";
-        private const string STEAM_API_KEY = "F3370BA16DEC558CFB86E4AD6DF6D2C2";
+        private readonly string STEAM_API_KEY;
 
-        public SteamAPIService(IHttpClientFactory httpClientFactory, IConfiguration configuration)
+        public SteamAPIService(IConfiguration configuration, IHttpClientFactory httpClientFactory)
         {
-            _httpClientFactory = httpClientFactory ?? throw new ArgumentNullException(nameof(httpClientFactory));
             _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
+            _httpClientFactory = httpClientFactory ?? throw new ArgumentNullException(nameof(httpClientFactory));
+
+            STEAM_API_KEY = _configuration["Steam:ApiKey"] ?? "";
         }
 
         public async Task<IEnumerable<SteamGame>> GetGamesAsync<IEnumerable>(int itemsPerPage)
@@ -59,7 +61,7 @@ namespace oversight_steam_webservice.Services
             return content.Contains("is_valid:true");
         }
 
-        public async Task<string> GetSteamIdFromOpenIdAsync(string openid)
+        public string GetSteamIdFromOpenIdAsync(string openid)
         {
             const string SteamIdPrefix = "https://steamcommunity.com/openid/id/";
             return openid.Replace(SteamIdPrefix, "");
