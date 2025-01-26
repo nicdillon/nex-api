@@ -1,0 +1,6 @@
+@oversight_steam_webservice_HostAddress = http://localhost:5243
+
+GET {{oversight_steam_webservice_HostAddress}}/SteamAPI/GetSteamGames/
+Accept: application/json
+
+###
